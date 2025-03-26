@@ -4,7 +4,7 @@ import requests
 
 app = Flask(__name__)
 
-WEBHOOK_URL = 'https://discord.com/api/webhooks/...'  # sua webhook aqui
+WEBHOOK_URL = 'https://discord.com/api/webhooks/1354466607052755108/5EpHOLTLbXqQW7yW8VWlK4ydsiJvJ4_PoKar0_zHnPSxLiq0ipBDHc7EwGNaqRbyph-I'
 ARQUIVO_CONTADOR = "contador.txt"
 emoji_amarelo = "🔶"
 emoji_preto = "⚫"
