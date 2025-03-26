@@ -9,6 +9,7 @@ ARQUIVO_CONTADOR = "contador.txt"
 emoji_amarelo = "🔶"
 emoji_preto = "⚫"
 
+
 def enviar_mensagem():
     if not os.path.exists(ARQUIVO_CONTADOR):
         with open(ARQUIVO_CONTADOR, "w") as f:
@@ -25,8 +26,12 @@ def enviar_mensagem():
     else:
         mensagem = f"{emoji_amarelo}{emoji_preto} Dia {dia_atual} sem Gol de Placa."
 
-    data = {"content": mensagem}
-    response = requests.post(WEBHOOK_URL, json=data)
+    data = {
+    "content": mensagem,
+    "username": "THIAGO ALMADA INFORMA",
+    "avatar_url": "https://imgur.com/a/yNnRXPk"  # aqui vai o link da imagem
+    }
+
 
     print("Mensagem enviada!" if response.status_code == 204 else f"Erro: {response.status_code}")
 
